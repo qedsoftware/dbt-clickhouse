@@ -62,6 +62,8 @@ class ChHttpClient(ChClientWrapper):
                 send_receive_timeout=credentials.send_receive_timeout,
                 client_name=f'dbt/{dbt_version} dbt-clickhouse/{dbt_clickhouse_version}',
                 verify=credentials.verify,
+                client_cert=credentials.client_cert,
+                client_cert_key=credentials.client_cert_key,
                 query_limit=0,
                 settings=self._conn_settings,
             )
